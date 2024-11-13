@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-visualizador',
   standalone: true,
   imports: [],
   templateUrl: './visualizador.component.html',
-  styleUrl: './visualizador.component.css'
+  styleUrls: ['./visualizador.component.css']
 })
 export class VisualizadorComponent {
-
+  @Input() color: string = 'rgb(128, 0, 128)'; // Color inicial morado
 }

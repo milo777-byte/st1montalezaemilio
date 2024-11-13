@@ -1,6 +1,5 @@
-/* visualizador.component.css */
 .cuadrado {
     width: 100px; /* Ancho del cuadrado */
     height: 100px; /* Alto del cuadrado */
-    background-color: rgb(128, 0, 128); /* Color morado */
+    background-color: rgb(128, 0, 128); /* Color inicial morado */
 }

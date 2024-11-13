@@ -1,3 +1,2 @@
-<div>
-    <app-visualizador></app-visualizador>
-</div>
+<app-primary-component (colorChange)="handleColorChange($event)"></app-primary-component>
+<app-visualizador [color]="color"></app-visualizador>
