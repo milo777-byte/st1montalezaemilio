@@ -5,6 +5,7 @@
   <div class="layout">
     <div class="left-panel">
       <div class="buttons">
+        <app-dark-mode></app-dark-mode> <!-- Agregar el componente de modo oscuro aquí -->
         <app-accept-component (acceptClick)="onAccept()"></app-accept-component>
         <app-cancel-component (cancelClick)="onCancel()"></app-cancel-component>
         <app-primary-component (colorChange)="handleColorChange($event)"></app-primary-component>
@@ -26,6 +27,9 @@
         </div>
       </div>
     </div>
+
+    <!-- Línea vertical separadora -->
+    <div class="separator"></div>
 
     <div class="right-panel">
       <app-visualizador 

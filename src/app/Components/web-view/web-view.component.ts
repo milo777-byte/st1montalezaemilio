@@ -6,7 +6,8 @@ import { ContrasenaComponent } from '../contrasena/contrasena.component';
 import { EMailComponent } from '../e-mail/e-mail.component'; 
 import { TextoComponent } from '../texto/texto.component'; 
 import { AcceptComponentComponent } from '../accept-component/accept-component.component'; 
-import { CancelComponentComponent } from '../cancel-component/cancel-component.component'; // Asegúrate de importar el componente
+import { CancelComponentComponent } from '../cancel-component/cancel-component.component'; 
+import { DarkModeComponent } from '../dark-mode/dark-mode.component'; // Importar el componente de modo oscuro
 
 @Component({
   selector: 'app-web-view',
@@ -19,7 +20,8 @@ import { CancelComponentComponent } from '../cancel-component/cancel-component.c
     EMailComponent, 
     TextoComponent, 
     AcceptComponentComponent,
-    CancelComponentComponent // Asegúrate de incluir el componente
+    CancelComponentComponent,
+    DarkModeComponent // Asegúrate de incluir el componente
   ],
   templateUrl: './web-view.component.html',
   styleUrls: ['./web-view.component.css']
