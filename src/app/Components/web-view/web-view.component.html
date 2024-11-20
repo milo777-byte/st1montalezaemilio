@@ -1,24 +1,40 @@
-<!-- web-view.component.html -->
-<div>
-    <app-visualizador 
-      [color]="color" 
-      [shape]="shape" 
-      [password]="password" 
-      [email]="email" 
-      [text]="text">
-    </app-visualizador>
-    
-    <app-primary-component (colorChange)="handleColorChange($event)"></app-primary-component>
-    
-    <app-secondary-component (shapeChange)="handleShapeChange($event)"></app-secondary-component>
-    
-    <app-contrasena (passwordChange)="handlePasswordChange($event)"></app-contrasena>
-    
-    <app-e-mail (emailChange)="handleEmailChange($event)"></app-e-mail>
-    
-    <app-texto (textChange)="handleTextChange($event)"></app-texto>
-    
-    <app-accept-component (acceptClick)="onAccept()"></app-accept-component> <!-- Componente de aceptar -->
-    
-    <app-cancel-component (cancelClick)="onCancel()"></app-cancel-component> <!-- Componente de cancelar -->
+<div class="container">
+  <h1 class="title">Sumativa</h1>
+  <hr class="divider" />
+
+  <div class="layout">
+    <div class="left-panel">
+      <div class="buttons">
+        <app-accept-component (acceptClick)="onAccept()"></app-accept-component>
+        <app-cancel-component (cancelClick)="onCancel()"></app-cancel-component>
+        <app-primary-component (colorChange)="handleColorChange($event)"></app-primary-component>
+        <app-secondary-component (shapeChange)="handleShapeChange($event)"></app-secondary-component>
+      </div>
+
+      <div class="input-fields">
+        <div class="input-group">
+          <label for="email">Correo:</label>
+          <app-e-mail (emailChange)="handleEmailChange($event)"></app-e-mail>
+        </div>
+        <div class="input-group">
+          <label for="password">Contraseña:</label>
+          <app-contrasena (passwordChange)="handlePasswordChange($event)"></app-contrasena>
+        </div>
+        <div class="input-group">
+          <label for="text">Texto:</label>
+          <app-texto (textChange)="handleTextChange($event)"></app-texto>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <app-visualizador 
+        [color]="color" 
+        [shape]="shape" 
+        [password]="password" 
+        [email]="email" 
+        [text]="text">
+      </app-visualizador>
+    </div>
   </div>
+</div>

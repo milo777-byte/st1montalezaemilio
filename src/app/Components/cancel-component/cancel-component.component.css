@@ -1,0 +1,13 @@
+.cancel-button {
+    background-color: red; /* Botón de cancelar en rojo */
+    color: white; /* Texto en blanco */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Espacio entre botones */
+  }
+  
+  .cancel-button:hover {
+    opacity: 0.8; /* Efecto hover */
+  }

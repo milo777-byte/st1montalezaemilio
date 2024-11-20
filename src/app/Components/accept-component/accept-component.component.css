@@ -1,0 +1,13 @@
+.accept-button {
+    background-color: green; /* Botón de aceptar en verde */
+    color: white; /* Texto en blanco */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Espacio entre botones */
+  }
+  
+  .accept-button:hover {
+    opacity: 0.8; /* Efecto hover */
+  }

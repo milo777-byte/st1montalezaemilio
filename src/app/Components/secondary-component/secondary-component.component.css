@@ -1,13 +1,13 @@
-/* secondary-component.component.css */i
 .secondary-button {
-   padding: 10px 20px; /* Espaciado interno */
-    background-color: rgb(0, 123, 255); /* Color de fondo (azul) */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-  }
-  
-  .secondary-button:hover {
-    background-color: rgb(0, 105, 217); /* Color de fondo al pasar el mouse */
-  }
+  background-color: white; /* Botón secundario en blanco */
+  color: black; /* Texto en negro */
+  padding: 10px;
+  border: 1px solid black; /* Borde negro para el botón blanco */
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Espacio entre botones */
+}
+
+.secondary-button:hover {
+  opacity: 0.8; /* Efecto hover */
+}
