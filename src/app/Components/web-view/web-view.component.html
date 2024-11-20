@@ -1,2 +1,24 @@
-<app-primary-component (colorChange)="handleColorChange($event)"></app-primary-component>
-<app-visualizador [color]="color"></app-visualizador>
+<!-- web-view.component.html -->
+<div>
+    <app-visualizador 
+      [color]="color" 
+      [shape]="shape" 
+      [password]="password" 
+      [email]="email" 
+      [text]="text">
+    </app-visualizador>
+    
+    <app-primary-component (colorChange)="handleColorChange($event)"></app-primary-component>
+    
+    <app-secondary-component (shapeChange)="handleShapeChange($event)"></app-secondary-component>
+    
+    <app-contrasena (passwordChange)="handlePasswordChange($event)"></app-contrasena>
+    
+    <app-e-mail (emailChange)="handleEmailChange($event)"></app-e-mail>
+    
+    <app-texto (textChange)="handleTextChange($event)"></app-texto>
+    
+    <app-accept-component (acceptClick)="onAccept()"></app-accept-component> <!-- Componente de aceptar -->
+    
+    <app-cancel-component (cancelClick)="onCancel()"></app-cancel-component> <!-- Componente de cancelar -->
+  </div>

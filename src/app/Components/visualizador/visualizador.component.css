@@ -1,5 +1,12 @@
-.cuadrado {
-    width: 100px; /* Ancho del cuadrado */
-    height: 100px; /* Alto del cuadrado */
-    background-color: rgb(128, 0, 128); /* Color inicial morado */
+.square {
+  width: 100px; /* Ancho del cuadrado */
+  height: 100px; /* Alto del cuadrado */
+  background-color: inherit; /* Hereda el color de fondo */
+}
+
+.circle {
+  width: 100px; /* Ancho del círculo */
+  height: 100px; /* Alto del círculo */
+  background-color: inherit; /* Hereda el color de fondo */
+  border-radius: 50%; /* Hace que el elemento sea un círculo */
 }
