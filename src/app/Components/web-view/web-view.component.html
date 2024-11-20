@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container" [class.dark-mode]="isDarkMode">
   <h1 class="title">Sumativa</h1>
   <hr class="divider" />
 
   <div class="layout">
     <div class="left-panel">
       <div class="buttons">
-        <app-dark-mode></app-dark-mode> <!-- Agregar el componente de modo oscuro aquí -->
+        <app-dark-mode (modeChange)="handleModeChange($event)"></app-dark-mode> <!-- Agregar el componente de modo oscuro aquí -->
         <app-accept-component (acceptClick)="onAccept()"></app-accept-component>
         <app-cancel-component (cancelClick)="onCancel()"></app-cancel-component>
         <app-primary-component (colorChange)="handleColorChange($event)"></app-primary-component>

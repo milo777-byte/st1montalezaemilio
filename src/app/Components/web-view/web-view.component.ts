@@ -7,7 +7,7 @@ import { EMailComponent } from '../e-mail/e-mail.component';
 import { TextoComponent } from '../texto/texto.component'; 
 import { AcceptComponentComponent } from '../accept-component/accept-component.component'; 
 import { CancelComponentComponent } from '../cancel-component/cancel-component.component'; 
-import { DarkModeComponent } from '../dark-mode/dark-mode.component'; // Importar el componente de modo oscuro
+import { DarkModeComponent } from '../dark-mode/dark-mode.component'; // Importar el componente
 
 @Component({
   selector: 'app-web-view',
@@ -27,11 +27,19 @@ import { DarkModeComponent } from '../dark-mode/dark-mode.component'; // Importa
   styleUrls: ['./web-view.component.css']
 })
 export class WebViewComponent {
+  isDarkMode = false;
+
+  // Manejar el cambio de modo oscuro
+  handleModeChange(isDark: boolean) {
+    this.isDarkMode = isDark;
+  }
+
   color: string = 'rgb(128, 0, 128)'; // Color inicial morado
   shape: string = 'square'; // Forma inicial por defecto
   password: string = ''; // Variable para almacenar la contraseña
   email: string = ''; // Variable para almacenar el correo electrónico
   text: string = ''; // Variable para almacenar el texto
+
 
   @ViewChild(VisualizadorComponent) visualizador!: VisualizadorComponent; // Referencia al componente Visualizador
 
@@ -67,4 +75,5 @@ export class WebViewComponent {
     this.shape = 'square'; // Restablecer forma inicial
     this.visualizador.showValidationIcon = false; // Ocultar el icono de validación
   }
+
 }

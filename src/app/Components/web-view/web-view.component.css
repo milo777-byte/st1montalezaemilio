@@ -89,3 +89,25 @@ button:hover {
   height: auto; /* Altura automática para ocupar el espacio completo */
   margin: 0 20px; /* Espacio horizontal alrededor de la línea */
 }
+
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.container.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Otros estilos se mantienen igual */
+

@@ -1,25 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dark-mode',
   standalone: true,
-  imports: [],
   templateUrl: './dark-mode.component.html',
-  styleUrls: ['./dark-mode.component.css']
+  styleUrls: ['./dark-mode.component.css'],
 })
 export class DarkModeComponent {
-  isDarkMode: boolean = false; // Variable para rastrear el estado del modo oscuro
+  @Output() modeChange = new EventEmitter<boolean>();
+  isDarkMode = false;
 
-  toggleDarkMode() {
-    this.isDarkMode = !this.isDarkMode; // Alternar el estado del modo oscuro
-    this.applyDarkMode();
-  }
-
-  applyDarkMode() {
-    if (this.isDarkMode) {
-      document.body.classList.add('dark-mode'); // Agregar clase para el modo oscuro
-    } else {
-      document.body.classList.remove('dark-mode'); // Remover clase para el modo claro
-    }
+  toggleMode() {
+    this.isDarkMode = !this.isDarkMode;
+    this.modeChange.emit(this.isDarkMode); // Emite el estado actual
   }
 }

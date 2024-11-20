@@ -1,13 +1,12 @@
-/* dark-mode.component.css */
-body.dark-mode {
-    background-color: #121212; /* Color de fondo oscuro */
-    color: #ffffff; /* Color de texto claro */
-  }
-  
-  /* Estilos para el modo claro (opcional, si deseas definir algo específico) */
-  body {
-    background-color: #ffffff; /* Color de fondo claro */
-    color: #000000; /* Color de texto oscuro */
-  }
-  
-  /* Otros estilos para el modo oscuro */
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.8;
+}
