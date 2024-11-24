@@ -1,3 +1,39 @@
+/* Contenedor del visualizador */
+.visualizador-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaciado entre elementos */
+  font-family: Arial, sans-serif;
+  text-align: left; /* Alineación a la izquierda */
+}
+
+/* Títulos */
+.visualizador-title {
+  font-size: 20px; /* Tamaño del título */
+  font-weight: bold; /* Negrita */
+  margin: 0; /* Sin márgenes */
+}
+
+/* Texto */
+.visualizador-text {
+  font-size: 18px; /* Tamaño ligeramente menor al título */
+  margin: 5px 0 0 0; /* Espaciado superior */
+  font-weight: normal; /* No en negrita */
+}
+
+/* Estilos de la figura visualizada */
+/* Estilos de la figura visual */
+.visualizador-shape {
+  align-self: center; /* Centra horizontalmente la figura */
+  margin-top: auto; /* Empuja la figura hacia abajo */
+  margin-bottom: 20px; /* Espaciado inferior con el borde del contenedor */
+  width: 120px; /* Aumentado el tamaño para mejor visibilidad */
+  height: 120px;
+  display: flex;
+  justify-content: center; /* Centra el contenido interno de la figura */
+  align-items: center;
+}
+
 .square {
   width: 100px; /* Ancho del cuadrado */
   height: 100px; /* Alto del cuadrado */
@@ -10,3 +46,4 @@
   background-color: inherit; /* Hereda el color de fondo */
   border-radius: 50%; /* Hace que el elemento sea un círculo */
 }
+

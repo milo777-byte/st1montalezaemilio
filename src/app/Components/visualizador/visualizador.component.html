@@ -1,7 +1,15 @@
-<!-- visualizador.component.html -->
-<p>Correo electrónico ingresado: {{ email }}</p>  
-<p>Contraseña ingresada: {{ password }}</p>
-  <p>Texto ingresado: {{ text }}</p>
-  <div [ngClass]="shape" [style.backgroundColor]="color" class="visualizador">
-    <div class="icon" *ngIf="showValidationIcon" style="text-align: center; font-size: 50px;">{{ validationIcon }}</div>
+<div class="visualizador-container">
+  <h2 class="visualizador-title">Correo electrónico ingresado:</h2>
+  <p class="visualizador-text">{{ email }}</p>
+
+  <h2 class="visualizador-title">Contraseña ingresada:</h2>
+  <p class="visualizador-text">{{ password }}</p>
+
+  <h2 class="visualizador-title">Texto ingresado:</h2>
+  <p class="visualizador-text">{{ text }}</p>
+
+  <div [ngClass]="shape" [style.backgroundColor]="color" class="visualizador-shape">
+    <div class="icon" *ngIf="showValidationIcon">{{ validationIcon }}</div>
   </div>
+</div>
+

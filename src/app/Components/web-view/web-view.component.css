@@ -7,6 +7,16 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
+.title {
+  text-align: left; /* Alineado a la izquierda */
+  font-size: 36px; /* Tamaño grande para destacar */
+  font-weight: bold; /* Negrita para impacto visual */
+  font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
+  letter-spacing: 1px; /* Espaciado ligero entre letras */
+  margin: 0; /* Elimina márgenes superiores/inferiores */
+}
+
+
 .container {
   display: flex;
   flex-direction: column;
