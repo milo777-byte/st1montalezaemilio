@@ -1,13 +1,17 @@
 .secondary-button {
-  background-color: white; /* Botón secundario en blanco */
-  color: black; /* Texto en negro */
-  padding: 10px;
-  border: 1px solid black; /* Borde negro para el botón blanco */
-  border-radius: 5px;
+  background-color: #03a9f4; /* Azul secundario */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  margin-bottom: 10px; /* Espacio entre botones */
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .secondary-button:hover {
-  opacity: 0.8; /* Efecto hover */
+  transform: scale(1.05);
+  opacity: 0.9;
 }

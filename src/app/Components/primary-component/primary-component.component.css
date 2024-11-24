@@ -1,13 +1,17 @@
 .primary-button {
-    background-color: blue; /* Botón primario en azul */
-    color: white; /* Texto en blanco */
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px; /* Espacio entre botones */
-  }
-  
-  .primary-button:hover {
-    opacity: 0.8; /* Efecto hover */
-  }
+  background-color: #007bff; /* Azul primario */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.primary-button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}

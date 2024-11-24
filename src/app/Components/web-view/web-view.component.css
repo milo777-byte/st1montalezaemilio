@@ -1,113 +1,124 @@
-.container {
-  padding: 20px;
+/* Ajuste para ocupar toda la altura y el ancho */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.layout {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px;
+}
+
+.left-panel, .right-panel {
+  width: 48%; /* Ajustado para más espacio */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f4f4f4; /* Fondo claro para los paneles */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.separator {
+  width: 2px;
+  background-color: #000;
+  align-self: stretch;
+  margin: 0 10px;
+}
+
+
+input, button {
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.input-fields {
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .title {
   text-align: center;
   font-size: 24px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .divider {
   border: 1px solid #000;
-  margin-bottom: 20px;
-}
-
-.layout {
-  display: flex;
-  justify-content: space-between;
-}
-
-.left-panel {
-  width: 45%;
-  display: flex;
-  flex-direction: column; /* Alinear los botones y campos verticalmente */
-}
-
-.right-panel {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 10px 0;
 }
 
 .buttons {
+  display: flex;
+  justify-content: space-between; /* Espaciado uniforme entre los botones */
+  align-items: center;
+  gap: 10px; /* Espacio entre los botones */
   margin-bottom: 20px;
-  display: flex;
-  flex-direction: column; /* Alinear los botones verticalmente */
+  flex-wrap: wrap; /* Permitir que los botones se ajusten en caso de que el espacio sea pequeño */
 }
 
-/* Estilo para los grupos de entrada */
-.input-fields {
-  display: flex;
-  flex-direction: column; /* Alinear los campos de entrada verticalmente */
+.buttons button {
+  flex: 1; /* Asegura que todos los botones tengan un tamaño uniforme */
+  max-width: 120px; /* Límite máximo de ancho por botón */
 }
 
-.input-group {
-  margin-bottom: 20px; /* Espacio entre grupos de entrada */
+.dark-mode-button {
+  margin-left: auto; /* Mueve el botón de modo oscuro al extremo derecho */
+  flex: 0; /* No ocupa espacio extra */
 }
 
-label {
-  font-weight: bold;
-  margin-bottom: 5px; /* Espacio entre la etiqueta y el campo de entrada */
-  display: block; /* Asegura que la etiqueta esté en su propia línea */
-}
-
-/* Asegúrate de que los campos de entrada tengan un estilo uniforme */
-input {
-  width: 100%; /* Hacer que los campos de entrada ocupen el ancho completo */
-  padding: 10px; /* Espaciado interno */
-  border: 1px solid #ccc; /* Borde gris claro */
-  border-radius: 5px; /* Bordes redondeados */
-  margin-bottom: 10px; /* Espacio entre los campos de entrada */
-}
-
-/* Espacio entre el visualizador y los demás elementos */
-.right-panel {
-  margin-top: 20px; /* Espacio superior para el panel derecho */
-}
-
-/* Asegúrate de que los botones tengan un estilo uniforme */
-button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px; /* Espacio entre botones */
-}
-
-/* Efecto hover para los botones */
-button:hover {
-  opacity: 0.8; /* Efecto hover */
-}
-
-/* Estilo para la línea vertical separadora */
-.separator {
-  width: 2px; /* Ancho de la línea */
-  background-color: #000; /* Color de la línea */
-  height: auto; /* Altura automática para ocupar el espacio completo */
-  margin: 0 20px; /* Espacio horizontal alrededor de la línea */
-}
-
-.container {
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  background-color: white;
-  color: black;
-  transition: all 0.3s ease;
-}
 
 .container.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
 
-.title {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 10px;
+.container.dark-mode .left-panel, 
+.container.dark-mode .right-panel {
+  background-color: #1e1e1e;
+  color: #ffffff;
 }
 
-/* Otros estilos se mantienen igual */
-
+.container.dark-mode input {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-color: #444;
+}

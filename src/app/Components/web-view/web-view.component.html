@@ -3,15 +3,18 @@
   <hr class="divider" />
 
   <div class="layout">
+    <!-- Panel izquierdo -->
     <div class="left-panel">
+      <!-- Sección de botones -->
       <div class="buttons">
-        <app-dark-mode (modeChange)="handleModeChange($event)"></app-dark-mode> <!-- Agregar el componente de modo oscuro aquí -->
+        <app-dark-mode (modeChange)="handleModeChange($event)"></app-dark-mode>
         <app-accept-component (acceptClick)="onAccept()"></app-accept-component>
         <app-cancel-component (cancelClick)="onCancel()"></app-cancel-component>
         <app-primary-component (colorChange)="handleColorChange($event)"></app-primary-component>
         <app-secondary-component (shapeChange)="handleShapeChange($event)"></app-secondary-component>
       </div>
 
+      <!-- Sección de campos de entrada -->
       <div class="input-fields">
         <div class="input-group">
           <label for="email">Correo:</label>
@@ -28,17 +31,19 @@
       </div>
     </div>
 
-    <!-- Línea vertical separadora -->
+    <!-- Línea separadora -->
     <div class="separator"></div>
 
+    <!-- Panel derecho -->
     <div class="right-panel">
-      <app-visualizador 
-        [color]="color" 
-        [shape]="shape" 
-        [password]="password" 
-        [email]="email" 
+      <app-visualizador
+        [color]="color"
+        [shape]="shape"
+        [password]="password"
+        [email]="email"
         [text]="text">
       </app-visualizador>
     </div>
   </div>
 </div>
+
