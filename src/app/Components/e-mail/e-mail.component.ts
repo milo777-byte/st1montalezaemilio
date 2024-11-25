@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-e-mail',
@@ -8,17 +8,17 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./e-mail.component.css']
 })
 export class EMailComponent {
+  @Input() emailValue: string = ''; // Recibe el valor desde el padre
   @Output() emailChange = new EventEmitter<string>();
-  email: string = '';
 
   onEmailChange(event: Event) {
     const input = event.target as HTMLInputElement;
-    this.email = input.value;
+    this.emailValue = input.value;
 
     // Validación simple: verificar el formato del correo electrónico
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (emailPattern.test(this.email)) {
-      this.emailChange.emit(this.email); // Emitir el email si es válido
+    if (emailPattern.test(this.emailValue)) {
+      this.emailChange.emit(this.emailValue); // Emitir el email si es válido
     } else {
       this.emailChange.emit(''); // Emitir vacío si no es válido
     }

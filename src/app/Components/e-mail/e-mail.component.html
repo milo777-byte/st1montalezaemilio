@@ -1,2 +1,6 @@
-<!-- e-mail.component.html -->
-<input type="email" (input)="onEmailChange($event)" placeholder="Ingrese su correo electrónico" />
+<input 
+  type="email" 
+  [value]="emailValue" 
+  (input)="onEmailChange($event)" 
+  placeholder="Ingrese su correo electrónico" />
+

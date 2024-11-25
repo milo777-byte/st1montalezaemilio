@@ -1,2 +1,5 @@
-<!-- contrasena.component.html -->
-<input type="password" (input)="onPasswordChange($event)" placeholder="Ingrese su contraseña" />
+<input 
+  type="password" 
+  [value]="passwordValue" 
+  (input)="onPasswordChange($event)" 
+  placeholder="Ingrese su contraseña" />

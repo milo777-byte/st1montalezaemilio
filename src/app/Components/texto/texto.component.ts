@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-texto',
@@ -8,14 +8,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./texto.component.css']
 })
 export class TextoComponent {
-  @Output() textChange = new EventEmitter<string>();
-  text: string = '';
+  @Input() textValue: string = ''; // Recibe el valor desde el componente padre
+  @Output() textChange = new EventEmitter<string>(); // Emite cambios hacia el componente padre
 
   onTextChange(event: Event) {
     const input = event.target as HTMLInputElement;
-    this.text = input.value;
+    this.textValue = input.value;
 
     // Emitir el texto ingresado
-    this.textChange.emit(this.text);
+    this.textChange.emit(this.textValue);
   }
 }
