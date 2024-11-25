@@ -1,5 +1,5 @@
-<div class="container" [class.dark-mode]="isDarkMode">
-  <h1 class="title">Sumativa</h1>
+<div class="container" [class.dark-mode]="isDarkMode"> 
+  <h1 class="title">SUMATIVA</h1>
   <hr class="divider" />
 
   <div class="layout">
@@ -7,11 +7,17 @@
     <div class="left-panel">
       <!-- Sección de botones -->
       <div class="buttons">
-        <app-dark-mode (modeChange)="handleModeChange($event)"></app-dark-mode>
-        <app-accept-component (acceptClick)="onAccept()"></app-accept-component>
-        <app-cancel-component (cancelClick)="onCancel()"></app-cancel-component>
-        <app-primary-component (colorChange)="handleColorChange($event)"></app-primary-component>
-        <app-secondary-component (shapeChange)="handleShapeChange($event)"></app-secondary-component>
+        <div class="top-buttons">
+          <app-accept-component (acceptClick)="onAccept()"></app-accept-component>
+          <app-cancel-component (cancelClick)="onCancel()"></app-cancel-component>
+        </div>
+        <div class="bottom-buttons">
+          <app-primary-component (colorChange)="handleColorChange($event)"></app-primary-component>
+          <app-secondary-component (shapeChange)="handleShapeChange($event)"></app-secondary-component>
+        </div>
+        <div class="center-button">
+          <app-dark-mode (modeChange)="handleModeChange($event)"></app-dark-mode>
+        </div>
       </div>
 
       <!-- Sección de campos de entrada -->

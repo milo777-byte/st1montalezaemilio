@@ -1,0 +1,23 @@
+input[type="text"] {
+    width: 95%;
+    padding: 12px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+  }
+  
+  input[type="text"]::placeholder {
+    font-style: italic;
+    color: #aaa;
+  }
+  

@@ -8,14 +8,13 @@ html, body {
 }
 
 .title {
-  text-align: left; /* Alineado a la izquierda */
   font-size: 36px; /* Tamaño grande para destacar */
   font-weight: bold; /* Negrita para impacto visual */
   font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
   letter-spacing: 1px; /* Espaciado ligero entre letras */
-  margin: 0; /* Elimina márgenes superiores/inferiores */
+  margin-left: 10px;
+  margin-top: 25px;
 }
-
 
 .container {
   display: flex;
@@ -51,7 +50,6 @@ html, body {
   margin: 0 10px;
 }
 
-
 input, button {
   box-sizing: border-box;
 }
@@ -72,50 +70,71 @@ input:focus {
 
 .input-fields {
   width: 100%;
+  margin-top: 20px;
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
 }
 
 .input-group label {
+  font-size: 16px;
   font-weight: bold;
-  font-size: 14px;
+  font-family: 'Arial', sans-serif; /* Mismo estilo que el título */
   margin-bottom: 5px;
   display: block;
 }
 
-.title {
-  text-align: center;
-  font-size: 24px;
-  margin: 10px 0;
+.input-group input {
+  width: calc(100% - 20px); /* Deja espacio para el padding */
+  padding: 10px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  border: none;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
+.input-group input:focus {
+  background-color: #f1f1f1;
+  outline: none;
+  border: 1px solid #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Botones */
+.buttons {
+  display: flex;
+  flex-direction: column; /* Cambia a columna para organizar los grupos de botones */
+  align-items: center; /* Centra los botones horizontalmente */
+  gap: 10px; /* Espacio entre los grupos de botones */
+  margin: 20px auto 0; /* Margen superior de 20px, centrado horizontalmente */
+}
+
+.top-buttons, .bottom-buttons {
+  display: flex; /* Mantiene los botones en la misma fila */
+  justify-content: center; /* Centra los botones en su contenedor */
+  gap: 10px; /* Espacio entre los botones */
+}
+
+.center-button {
+  display: flex; /* Para centrar el botón */
+  justify-content: center; /* Centra el botón horizontalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Línea divisoria */
 .divider {
   border: 1px solid #000;
   margin: 10px 0;
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-between; /* Espaciado uniforme entre los botones */
-  align-items: center;
-  gap: 10px; /* Espacio entre los botones */
-  margin-bottom: 20px;
-  flex-wrap: wrap; /* Permitir que los botones se ajusten en caso de que el espacio sea pequeño */
-}
-
-.buttons button {
-  flex: 1; /* Asegura que todos los botones tengan un tamaño uniforme */
-  max-width: 120px; /* Límite máximo de ancho por botón */
-}
-
-.dark-mode-button {
-  margin-left: auto; /* Mueve el botón de modo oscuro al extremo derecho */
-  flex: 0; /* No ocupa espacio extra */
-}
-
-
+/* Modo oscuro */
 .container.dark-mode {
   background-color: #121212;
   color: #ffffff;
@@ -132,3 +151,15 @@ input:focus {
   color: #ffffff;
   border-color: #444;
 }
+
+.container.dark-mode .input-group {
+  background-color: #2c2c2c;
+  border-color: #444;
+}
+
+.container.dark-mode .input-group input {
+  background-color: #3c3c3c;
+  color: #ffffff;
+}
+
+
